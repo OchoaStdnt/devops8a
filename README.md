@@ -1,4 +1,4 @@
 # For School Labs
 > Test change sample
 > 
-> ![workflow](https://github.com/<UserName>/<RepositoryName>/actions/workflows/main.yml/badge.svg)
+> ![workflow](https://github.com/OchoaStdnt/devops8a/actions/workflows/main.yml/badge.svg)
