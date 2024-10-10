@@ -6,14 +6,24 @@ actor HR as "HR Advisor"
 rectangle Database
 
 rectangle "HR System" {
+
     usecase UC4 as "Get salaries
     by role"
 
-    usecase UCa as "Print salaries"
+    usecase UC6 as "View Record by
+    Employee"
+
+
+    usecase UCd as "Print salaries"
+    usecase UCf as "Print Employee"
 
     HR - UC4
-    UC4 ..> UCa : include
+    UC4 ..> UCd : include
     UC4 - Database
+
+    HR -UC6
+    UC6 ..> UCf : include
+    UC6 - Database
 }
 
 @enduml
