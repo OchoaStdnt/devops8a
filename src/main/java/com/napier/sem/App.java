@@ -14,13 +14,13 @@ public class App
         a.connect();
 
         // Extract employee salary information
-        ArrayList<Employee> employees = a.getAllSalariesRole();
+        ArrayList<Employee> employees = a.getAllSalaries();
 
         // Test the size of the returned data - should be 240124
         System.out.println(employees.size());
 
         //function to display all the salary information
-        a.printSalariesRole(employees);
+        a.printSalaries(employees);
 
         // Disconnect from database
         a.disconnect();
@@ -31,7 +31,7 @@ public class App
      * @return A list of all employees and salaries, or null if there is an error.
      * this is usecase #1
      */
-    public ArrayList<Employee> getAllSalariesRole()
+    public ArrayList<Employee> getAllSalaries()
     {
         try
         {
@@ -75,7 +75,7 @@ public class App
      * Prints a list of employees.
      * @param employees The list of employees to print.
      */
-    public void printSalariesRole(ArrayList<Employee> employees)
+    public void printSalaries(ArrayList<Employee> employees)
     {
         // Print header
         System.out.println(String.format("%-10s %-15s %-20s %-8s %-20s", "Emp No", "First Name", "Last Name", "Salary", "Title"));
