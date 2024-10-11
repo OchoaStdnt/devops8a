@@ -3,7 +3,7 @@
 > ~~~
 > git submodule add https://github.com/datacharmer/test_db db/test_db
 > git submodule init
-> git submodule update
+> git submodule update 2
 > ~~~
 
 ![workflow](https://github.com/OchoaStdnt/devops8a/actions/workflows/main.yml/badge.svg)
