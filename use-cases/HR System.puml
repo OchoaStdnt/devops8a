@@ -6,6 +6,8 @@ actor HR as "HR Advisor"
 rectangle Database
 
 rectangle "HR System" {
+    usecase UC1 as "Get salaries
+     of all"
 
     usecase UC4 as "Get salaries
     by role"
@@ -13,9 +15,13 @@ rectangle "HR System" {
     usecase UC6 as "View Record by
     Employee"
 
-
-    usecase UCd as "Print salaries"
+    usecase UCa as "Print all Salaries"
+    usecase UCd as "Print salaries by role"
     usecase UCf as "Print Employee"
+
+    HR - UC1
+    UC1 ..> UCa : include
+    UC4 - Database
 
     HR - UC4
     UC4 ..> UCd : include
