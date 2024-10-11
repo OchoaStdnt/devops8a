@@ -20,7 +20,7 @@ public class App
         System.out.println(employees.size());
 
         //function to display all the salary information
-        a.printSalaries(employees);
+        a.printSalariesRole(employees);
 
         // Disconnect from database
         a.disconnect();
@@ -75,15 +75,15 @@ public class App
      * Prints a list of employees.
      * @param employees The list of employees to print.
      */
-    public void printSalaries(ArrayList<Employee> employees)
+    public void printSalariesRole(ArrayList<Employee> employees)
     {
         // Print header
-        System.out.println(String.format("%-10s %-15s %-20s %-8s %-25s", "Emp No", "First Name", "Last Name", "Salary", "Title"));
+        System.out.println(String.format("%-10s %-15s %-20s %-8s %-20s", "Emp No", "First Name", "Last Name", "Salary", "Title"));
         // Loop over all employees in the list
         for (Employee emp : employees)
         {
             String emp_string =
-                    String.format("%-10s %-15s %-20s %-8s %-25s",
+                    String.format("%-10s %-15s %-20s %-8s %20s",
                             emp.emp_no, emp.first_name, emp.last_name, emp.salary, emp.title);
             System.out.println(emp_string);
         }
